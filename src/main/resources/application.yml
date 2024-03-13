@@ -1,0 +1,21 @@
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration
+  application:
+    name: online_testing
+  datasource:
+    url: jdbc:mysql://localhost:3306/online_testing?createDatabaseIfNotExist=true
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    open-in-view: false
+    database: MYSQL
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+server:
+  port: 8057
+
+
